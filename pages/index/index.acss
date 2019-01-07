@@ -1,0 +1,8 @@
+
+.range {
+  width: 100%;
+}
+.range image{
+  width: 100%;
+  /* min-height:  */
+}
