@@ -1,39 +1,24 @@
 <view>
-   <view class="range">
-    <image src="/images/8.jpg" mode="aspectFit"  onTap="makePhoneCall" />
-  </view>
-   <view class="range">
-    <image src="/images/5.jpg" mode="aspectFit"  onTap="makePhoneCall" />
-  </view>
-  <view class="range">
-    <image src="/images/7.jpg" mode="aspectFit"  onTap="makePhoneCall" />
-  </view>
-  <view class="range">
-    <image src="/images/4.jpg" mode="aspectFit"  onTap="makePhoneCall" />
-  </view>
-
-    <view class="box"> 
-    <!-- <view class="left"> 
-      <view class="text-view">
-        <text>品质</text>
+      <swiper 
+        style="height:150px"
+        class="demo-swiper"
+        previousMargin="10px"
+        nextMargin="10px"
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        vertical="{{vertical}}"
+        interval="{{interval}}"
+        circular="{{circular}}"
+      >
+        <block a:for="{{background}}">
+          <swiper-item key="swiper-item-{{index}}">
+            <view class="swiper-item bc_{{item}}">
+              <image class="image" src="{{item}}" mode="widthFix" />
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view a:for="{{details}}" class="range">
+         <image class="image" src="{{item}}" mode="aspectFit" onTap="makePhoneCall" />
       </view>
-      <view class="text-view">
-        <text>体验</text>
-      </view>
-      <view class="text-view">
-        <text>交互</text>
-      </view>
-    </view> -->
-    <view class="right">
-      <view class="head-view">
-        <text>StartAI</text>
-      </view>
-      <view class="text-view imgBox">
-        <!-- <text class="text"> -->
-     物联网发展方兴未艾，亓行物联作为一家立足于智能物联的研发型科技企业，致力于为工业企业、商业企业、政府机构等类型的众多客户建立基于智能物联技术的专项解决方案， 在智能家居、智能农业、智能媒体、智能工业、车联网等领域方面积累了大量创意技术解决方案。
-        <!-- </text> -->
-        
-      </view>
-    </view>
-  </view>
-</view>
+<view>

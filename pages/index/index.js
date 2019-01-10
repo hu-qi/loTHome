@@ -1,4 +1,13 @@
 Page({
+    data: {
+    background: ['/assets/img/DSC_1656.jpg', '/assets/img/DSC_1667.jpg'],
+    indicatorDots: true,
+    autoplay: true,
+    vertical: false,
+    interval: 3000,
+    circular: true,
+    details: ['/assets/img/1.jpg','/assets/img/2.jpg','/assets/img/3.jpg','/assets/img/4.jpg']
+  },
   onLoad(query) {
     // 页面加载
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
@@ -27,7 +36,7 @@ Page({
   onShareAppMessage() {
     // 返回自定义分享信息
     return {
-      title: '工业设计',
+      title: 'StartAI智能插座',
       desc: '广州亓行智能科技,打造您的智能家居！',
       path: 'pages/index/index',
     };
